@@ -1,0 +1,33 @@
+%h1 Listing pessoa_juridicas
+
+%table
+  %tr
+    %th Nome
+    %th Endereco
+    %th Bairro
+    %th Email
+    %th Telefone
+    %th Porte
+    %th Cnpj
+    %th Cidade
+    %th
+    %th
+    %th
+
+  - @pessoa_juridicas.each do |pessoa_juridica|
+    %tr
+      %td= pessoa_juridica.nome
+      %td= pessoa_juridica.endereco
+      %td= pessoa_juridica.bairro
+      %td= pessoa_juridica.email
+      %td= pessoa_juridica.telefone
+      %td= pessoa_juridica.porte
+      %td= pessoa_juridica.cnpj
+      %td= pessoa_juridica.cidade
+      %td= link_to 'Show', pessoa_juridica
+      %td= link_to 'Edit', edit_pessoa_juridica_path(pessoa_juridica)
+      %td= link_to 'Destroy', pessoa_juridica, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Pessoa juridica', new_pessoa_juridica_path

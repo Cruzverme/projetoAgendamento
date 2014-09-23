@@ -1,0 +1,2 @@
+module EmpregosHelper
+end

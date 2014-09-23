@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Cargo:
+  = @estagio.cargo
+%p
+  %b Quantidadedevagas:
+  = @estagio.quantidadeDeVagas
+%p
+  %b Salario:
+  = @estagio.salario
+%p
+  %b Descricao:
+  = @estagio.descricao
+%p
+  %b Especificacaodevaga:
+  = @estagio.especificacaoDeVAga
+%p
+  %b Pessoajuridica:
+  = @estagio.PessoaJuridica
+
+= link_to 'Edit', edit_estagio_path(@estagio)
+\|
+= link_to 'Back', estagios_path

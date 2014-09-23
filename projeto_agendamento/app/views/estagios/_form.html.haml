@@ -1,0 +1,28 @@
+= form_for @estagio do |f|
+  - if @estagio.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@estagio.errors.count, "error")} prohibited this estagio from being saved:"
+      %ul
+        - @estagio.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :cargo
+    = f.text_field :cargo
+  .field
+    = f.label :quantidadeDeVagas
+    = f.number_field :quantidadeDeVagas
+  .field
+    = f.label :salario
+    = f.number_field :salario
+  .field
+    = f.label :descricao
+    = f.text_area :descricao
+  .field
+    = f.label :especificacaoDeVAga
+    = f.text_field :especificacaoDeVAga
+  .field
+    = f.label :PessoaJuridica
+    = f.text_field :PessoaJuridica
+  .actions
+    = f.submit 'Save'

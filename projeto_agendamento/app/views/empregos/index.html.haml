@@ -1,0 +1,29 @@
+%h1 Listing empregos
+
+%table
+  %tr
+    %th Cargo
+    %th Quantidadedevagas
+    %th Salario
+    %th Descricao
+    %th Requisitos
+    %th Pessoajuridica
+    %th
+    %th
+    %th
+
+  - @empregos.each do |emprego|
+    %tr
+      %td= emprego.cargo
+      %td= emprego.quantidadeDeVagas
+      %td= emprego.salario
+      %td= emprego.descricao
+      %td= emprego.requisitos
+      %td= emprego.PessoaJuridica
+      %td= link_to 'Show', emprego
+      %td= link_to 'Edit', edit_emprego_path(emprego)
+      %td= link_to 'Destroy', emprego, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Emprego', new_emprego_path

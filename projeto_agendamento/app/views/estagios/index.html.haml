@@ -1,0 +1,29 @@
+%h1 Listing estagios
+
+%table
+  %tr
+    %th Cargo
+    %th Quantidadedevagas
+    %th Salario
+    %th Descricao
+    %th Especificacaodevaga
+    %th Pessoajuridica
+    %th
+    %th
+    %th
+
+  - @estagios.each do |estagio|
+    %tr
+      %td= estagio.cargo
+      %td= estagio.quantidadeDeVagas
+      %td= estagio.salario
+      %td= estagio.descricao
+      %td= estagio.especificacaoDeVAga
+      %td= estagio.PessoaJuridica
+      %td= link_to 'Show', estagio
+      %td= link_to 'Edit', edit_estagio_path(estagio)
+      %td= link_to 'Destroy', estagio, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Estagio', new_estagio_path

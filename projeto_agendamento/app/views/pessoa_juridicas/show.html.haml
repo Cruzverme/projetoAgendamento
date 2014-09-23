@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @pessoa_juridica.nome
+%p
+  %b Endereco:
+  = @pessoa_juridica.endereco
+%p
+  %b Bairro:
+  = @pessoa_juridica.bairro
+%p
+  %b Email:
+  = @pessoa_juridica.email
+%p
+  %b Telefone:
+  = @pessoa_juridica.telefone
+%p
+  %b Porte:
+  = @pessoa_juridica.porte
+%p
+  %b Cnpj:
+  = @pessoa_juridica.cnpj
+%p
+  %b Cidade:
+  = @pessoa_juridica.cidade
+
+= link_to 'Edit', edit_pessoa_juridica_path(@pessoa_juridica)
+\|
+= link_to 'Back', pessoa_juridicas_path
