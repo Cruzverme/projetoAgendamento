@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  resources :agendamentos
-
-  resources :empregos
-
-  resources :estagios
-
-  resources :pessoa_fisicas
-
   resources :pessoa_juridicas
 
   # The priority is based upon order of creation: first created -> highest priority.
