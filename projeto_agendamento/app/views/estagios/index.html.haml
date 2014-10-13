@@ -7,7 +7,7 @@
     %th Salario
     %th Descricao
     %th Especificacaodevaga
-    %th Pessoajuridica
+    %th Pessoa juridica
     %th
     %th
     %th
@@ -18,11 +18,11 @@
       %td= estagio.quantidadeDeVagas
       %td= estagio.salario
       %td= estagio.descricao
-      %td= estagio.especificacaoDeVAga
-      %td= estagio.PessoaJuridica
+      %td= estagio.especificacaoDeVaga
+      %td= estagio.pessoa_juridica.nome
       %td= link_to 'Show', estagio
       %td= link_to 'Edit', edit_estagio_path(estagio)
-      %td= link_to 'Destroy', estagio, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Excluir', estagio, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :estagios
+
   resources :pessoa_juridicas
 
   # The priority is based upon order of creation: first created -> highest priority.

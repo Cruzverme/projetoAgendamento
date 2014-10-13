@@ -6,7 +6,7 @@ FactoryGirl.define do
     quantidadeDeVagas 1
     salario 1
     descricao "MyText"
-    especificacaoDeVAga "MyString"
-    PessoaJuridica nil
+    especificacaoDeVaga "MyString"
+    pessoa_juridica nil
   end
 end

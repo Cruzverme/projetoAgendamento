@@ -1,3 +1,3 @@
 class Estagio < ActiveRecord::Base
-  belongs_to :PessoaJuridica
+  belongs_to :pessoa_juridica
 end

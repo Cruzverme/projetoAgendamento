@@ -7,8 +7,8 @@ RSpec.describe "estagios/show", :type => :view do
       :quantidadeDeVagas => 1,
       :salario => 2,
       :descricao => "MyText",
-      :especificacaoDeVAga => "Especificacaodevaga",
-      :PessoaJuridica => nil
+      :especificacaoDeVaga => "Especificacaodevaga",
+      :pessoa_juridica => nil
     ))
   end
 

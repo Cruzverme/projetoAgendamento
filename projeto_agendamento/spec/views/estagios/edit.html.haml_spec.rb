@@ -7,8 +7,8 @@ RSpec.describe "estagios/edit", :type => :view do
       :quantidadeDeVagas => 1,
       :salario => 1,
       :descricao => "MyText",
-      :especificacaoDeVAga => "MyString",
-      :PessoaJuridica => nil
+      :especificacaoDeVaga => "MyString",
+      :pessoa_juridica => nil
     ))
   end
 
@@ -25,9 +25,9 @@ RSpec.describe "estagios/edit", :type => :view do
 
       assert_select "textarea#estagio_descricao[name=?]", "estagio[descricao]"
 
-      assert_select "input#estagio_especificacaoDeVAga[name=?]", "estagio[especificacaoDeVAga]"
+      assert_select "input#estagio_especificacaoDeVaga[name=?]", "estagio[especificacaoDeVaga]"
 
-      assert_select "input#estagio_PessoaJuridica_id[name=?]", "estagio[PessoaJuridica_id]"
+      assert_select "input#estagio_pessoa_juridica_id[name=?]", "estagio[pessoa_juridica_id]"
     end
   end
 end
