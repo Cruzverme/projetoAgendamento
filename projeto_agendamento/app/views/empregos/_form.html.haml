@@ -1,0 +1,13 @@
+= simple_form_for(@emprego) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :cargo
+    = f.input :quantidadeDeVagas
+    = f.input :salario
+    = f.input :descricao
+    = f.input :requisitos
+    = f.association :pessoa_juridica, label_method: :nome
+
+  .form-actions
+    = f.button :submit, 'Salvar'

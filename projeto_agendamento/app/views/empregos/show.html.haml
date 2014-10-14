@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Cargo:
+  = @emprego.cargo
+%p
+  %b Quantidadedevagas:
+  = @emprego.quantidadeDeVagas
+%p
+  %b Salario:
+  = @emprego.salario
+%p
+  %b Descricao:
+  = @emprego.descricao
+%p
+  %b Requisitos:
+  = @emprego.requisitos
+%p
+  %b Pessoa juridica:
+  = @emprego.pessoa_juridica.nome
+
+= link_to 'Edit', edit_emprego_path(@emprego)
+\|
+= link_to 'Back', empregos_path

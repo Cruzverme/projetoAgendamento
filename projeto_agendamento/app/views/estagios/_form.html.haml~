@@ -1,0 +1,13 @@
+= simple_form_for(@estagio) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :cargo
+    = f.input :quantidadeDeVagas
+    = f.input :salario
+    = f.input :descricao
+    = f.input :especificacaoDeVaga
+    = f.association :pessoa_juridica
+
+  .form-actions
+    = f.button :submit

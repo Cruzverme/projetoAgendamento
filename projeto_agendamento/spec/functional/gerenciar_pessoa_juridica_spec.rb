@@ -1,7 +1,7 @@
 # coding: utf-8
 require 'rails_helper'
 
-feature 'pessoa juridica' do
+feature 'gerenciar pessoa juridica' do
 	scenario 'incluir PessoaJuridica' do # , :js => true do
 		visit new_pessoa_juridica_path
 		preencher_e_verificar_pessoa_juridica

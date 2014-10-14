@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :empregos
+
   resources :estagios
 
   resources :pessoa_juridicas
