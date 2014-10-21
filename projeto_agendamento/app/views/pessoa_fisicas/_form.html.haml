@@ -1,0 +1,16 @@
+= simple_form_for(@pessoa_fisica) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :dataNascimento, as: :string
+    = f.input :endereco
+    = f.input :cpf
+    = f.input :curriculo
+    = f.input :cidade
+    = f.input :bairro
+    = f.input :telefone
+    = f.input :email
+
+  .form-actions
+    = f.button :submit, 'Salvar'

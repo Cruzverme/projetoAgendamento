@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014042247) do
+ActiveRecord::Schema.define(version: 20141020225815) do
 
   create_table "cargos", force: true do |t|
     t.integer  "quantidadeDeVagas"
@@ -50,6 +50,20 @@ ActiveRecord::Schema.define(version: 20141014042247) do
   end
 
   add_index "estagios", ["pessoa_juridica_id"], name: "index_estagios_on_pessoa_juridica_id"
+
+  create_table "pessoa_fisicas", force: true do |t|
+    t.string   "nome"
+    t.date     "dataNascimento"
+    t.string   "endereco"
+    t.integer  "cpf"
+    t.text     "curriculo"
+    t.string   "cidade"
+    t.string   "bairro"
+    t.string   "telefone"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pessoa_juridicas", force: true do |t|
     t.string   "nome"

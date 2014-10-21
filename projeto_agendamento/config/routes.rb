@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pessoa_fisicas
+
   resources :empregos
 
   resources :estagios

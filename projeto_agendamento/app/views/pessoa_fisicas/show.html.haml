@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @pessoa_fisica.nome
+%p
+  %b Datanascimento:
+  = @pessoa_fisica.dataNascimento
+%p
+  %b Endereco:
+  = @pessoa_fisica.endereco
+%p
+  %b Cpf:
+  = @pessoa_fisica.cpf
+%p
+  %b Curriculo:
+  = @pessoa_fisica.curriculo
+%p
+  %b Cidade:
+  = @pessoa_fisica.cidade
+%p
+  %b Bairro:
+  = @pessoa_fisica.bairro
+%p
+  %b Telefone:
+  = @pessoa_fisica.telefone
+%p
+  %b Email:
+  = @pessoa_fisica.email
+
+= link_to 'Edit', edit_pessoa_fisica_path(@pessoa_fisica)
+\|
+= link_to 'Back', pessoa_fisicas_path
