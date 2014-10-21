@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProjetoAgendamento</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>Projeto Agendamento</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <%= stylesheet_link_tag    'default.css'%>
+  <%= stylesheet_link_tag  'fonts.css' %>
+  <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Didact+Gothic"%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><%=link_to "Sistema Agendamentos", controller: "home"  %></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				
+				<li class="active"> <%=link_to "HOME", controller: "home"  %></li>
+				<li> <%=link_to "Pessoa Juridica", controller: "pessoa_juridicas" %></li>
+				<li> <%=link_to "Emprego", controller: "empregos" %></li>
+				<li> <%=link_to "Estagio", controller: "estagios" %></li>
+				<li> <%=link_to "Pessoa Fisica", controller: "pessoa_fisicas" %></li>
+				<li> <%=link_to "Agendamento", controller: "agendamentos" %></li>
 
+			</ul>
+		</div>
+	</div>
+
+<div id="welcome">
+	<div class="container">
+			<%= yield %>
+	</div>
+</div>
+<div id="copyright" class="container">
+	<p>&copy; Untitled. All rights reserved. | Edited by Charles Pereira | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
 </body>
 </html>
+
+
+
+
