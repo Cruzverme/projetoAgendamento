@@ -7,7 +7,7 @@
     = f.input :salario
     = f.input :descricao
     = f.input :especificacaoDeVaga
-    = f.association :pessoa_juridica, label_method: :nome
+    = f.association :pessoa_juridica, label_method: :nome, :prompt => "Selecione"
 
   .form-actions
     = f.button :submit, 'Salvar'

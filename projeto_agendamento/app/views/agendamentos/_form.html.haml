@@ -4,9 +4,9 @@
   .form-inputs
     = f.input :data, as: :string
     = f.input :hora, as: :string
-    = f.association :pessoa_fisica, label_method: :nome
-    = f.association :estagio, label_method: :cargo
-    = f.association :emprego, label_method: :cargo
+    = f.association :pessoa_fisica, label_method: :nome, :prompt => "Selecione"
+    = f.association :estagio, label_method: :cargo, :prompt => "Selecione"
+    = f.association :emprego, label_method: :cargo, :prompt => "Selecione"
 
   .form-actions
     = f.button :submit, 'Salvar'
