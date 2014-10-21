@@ -1,0 +1,27 @@
+%h1 Listing agendamentos
+
+%table
+  %tr
+    %th Data
+    %th Hora
+    %th Pessoa fisica
+    %th Estagio
+    %th Emprego
+    %th
+    %th
+    %th
+
+  - @agendamentos.each do |agendamento|
+    %tr
+      %td= agendamento.data
+      %td= agendamento.hora
+      %td= agendamento.pessoa_fisica.nome
+      %td= agendamento.estagio.cargo
+      %td= agendamento.emprego.cargo
+      %td= link_to 'Show', agendamento
+      %td= link_to 'Edit', edit_agendamento_path(agendamento)
+      %td= link_to 'Excluir', agendamento, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Agendamento', new_agendamento_path

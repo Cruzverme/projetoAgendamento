@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Data:
+  = @agendamento.data
+%p
+  %b Hora:
+  = @agendamento.hora.strftime("%H:%M")
+%p
+  %b Pessoa fisica:
+  = @agendamento.pessoa_fisica.nome
+%p
+  %b Estagio:
+  = @agendamento.estagio.cargo
+%p
+  %b Emprego:
+  = @agendamento.emprego.cargo
+
+= link_to 'Edit', edit_agendamento_path(@agendamento)
+\|
+= link_to 'Back', agendamentos_path

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :agendamentos
+
   resources :pessoa_fisicas
 
   resources :empregos

@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020225815) do
+ActiveRecord::Schema.define(version: 20141021034011) do
+
+  create_table "agendamentos", force: true do |t|
+    t.date     "data"
+    t.time     "hora"
+    t.integer  "pessoa_fisica_id"
+    t.integer  "estagio_id"
+    t.integer  "emprego_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "agendamentos", ["emprego_id"], name: "index_agendamentos_on_emprego_id"
+  add_index "agendamentos", ["estagio_id"], name: "index_agendamentos_on_estagio_id"
+  add_index "agendamentos", ["pessoa_fisica_id"], name: "index_agendamentos_on_pessoa_fisica_id"
 
   create_table "cargos", force: true do |t|
     t.integer  "quantidadeDeVagas"

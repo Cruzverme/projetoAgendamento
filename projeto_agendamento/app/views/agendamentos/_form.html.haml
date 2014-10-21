@@ -1,0 +1,12 @@
+= simple_form_for(@agendamento) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :data, as: :string
+    = f.input :hora, as: :string
+    = f.association :pessoa_fisica, label_method: :nome
+    = f.association :estagio, label_method: :cargo
+    = f.association :emprego, label_method: :cargo
+
+  .form-actions
+    = f.button :submit, 'Salvar'
